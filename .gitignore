@@ -1,0 +1,24 @@
+# uv
+dist
+uv.lock
+
+# hatch-vcs
+_version.py
+
+# pytest
+*.coverage*
+
+# python
+*.egg-info
+__pycache__
+
+# mkdocs
+site/
+
+# temp
+temp.*
+*.DS_store
+
+# maturin
+target/
+*.so
