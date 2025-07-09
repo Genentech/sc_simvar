@@ -1,0 +1,107 @@
+site_name: sc_simvar
+site_author: Max Hargreaves
+copyright: Genentech, 2025
+repo_name: single_cell/sc_simvar
+repo_url: https://code.roche.com/single_cell/sc_simvar
+
+plugins:
+  - mkdocstrings:
+      enabled: true
+      default_handler: python
+      handlers:
+        python:
+          options:
+            filters:
+              - "!^_.*"
+            docstring_style: numpy
+            show_root_toc_entry: false
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/gitlab
+      link: https://code.roche.com/hargreaw
+
+# https://squidfunk.github.io/mkdocs-material/setup/extensions/
+markdown_extensions:
+  # Python Markdown
+  - toc:
+      permalink: true
+  # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#configuration
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      pygments_style: one-dark
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/#configuration
+  - pymdownx.tabbed:
+      alternate_style: true
+  # https://squidfunk.github.io/mkdocs-material/reference/admonitions/#configuration
+  - admonition
+  - pymdownx.details
+  - pymdownx.caret
+
+theme:
+  name: material
+  features:
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/
+    - navigation.footer
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    - navigation.indexes
+    - navigation.instant
+    - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    # https://squidfunk.github.io/mkdocs-material/reference/content-tabs/
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    # - announce.dismiss
+    # https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/
+    - search.highlight
+    - search.share
+    - search.suggest
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Home:
+      - Home: index.md
+      - Contributing: contributing.md
+      - Authors: authors.md
+  - API: api.md
+  - Changelog: changelog.md
+  - License: license.md

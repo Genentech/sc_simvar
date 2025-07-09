@@ -1,0 +1,974 @@
+{
+  "True_True_5000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 5.693198,
+    "hotspot_time": 20.155653
+  },
+  "True_True_5000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 5.644133,
+    "hotspot_time": 19.480249
+  },
+  "True_True_5000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 5.736113,
+    "hotspot_time": 19.401218
+  },
+  "True_True_5000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 22.816865,
+    "hotspot_time": 76.074826
+  },
+  "True_True_5000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 21.50989,
+    "hotspot_time": 76.017174
+  },
+  "True_True_5000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 24.75449,
+    "hotspot_time": 76.562796
+  },
+  "True_True_5000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 59.953062,
+    "hotspot_time": 167.59479
+  },
+  "True_True_5000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 45.611323,
+    "hotspot_time": 166.986068
+  },
+  "True_True_5000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 45.215561,
+    "hotspot_time": 167.122872
+  },
+  "True_True_10000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 13.397352,
+    "hotspot_time": 38.23375
+  },
+  "True_True_10000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 12.184177,
+    "hotspot_time": 38.23865
+  },
+  "True_True_10000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 11.791957,
+    "hotspot_time": 38.261554
+  },
+  "True_True_10000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 50.902572,
+    "hotspot_time": 149.233178
+  },
+  "True_True_10000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 46.046323,
+    "hotspot_time": 149.467243
+  },
+  "True_True_10000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 44.579644,
+    "hotspot_time": 149.388449
+  },
+  "True_True_10000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 119.237023,
+    "hotspot_time": 335.310516
+  },
+  "True_True_10000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 104.640561,
+    "hotspot_time": 334.81093
+  },
+  "True_True_10000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 99.444464,
+    "hotspot_time": 334.95451
+  },
+  "True_True_15000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 20.721064,
+    "hotspot_time": 58.550052
+  },
+  "True_True_15000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 18.624456,
+    "hotspot_time": 58.576051
+  },
+  "True_True_15000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 18.163851,
+    "hotspot_time": 58.624671
+  },
+  "True_True_15000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 80.039338,
+    "hotspot_time": 227.69695
+  },
+  "True_True_15000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 70.811159,
+    "hotspot_time": 227.619629
+  },
+  "True_True_15000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 67.346236,
+    "hotspot_time": 227.897765
+  },
+  "True_True_15000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 182.821371,
+    "hotspot_time": 505.112162
+  },
+  "True_True_15000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 164.024668,
+    "hotspot_time": 507.03927
+  },
+  "True_True_15000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 154.391013,
+    "hotspot_time": 503.077772
+  },
+  "True_False_5000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 6.54349,
+    "hotspot_time": 20.395051
+  },
+  "True_False_5000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 7.21741,
+    "hotspot_time": 20.560765
+  },
+  "True_False_5000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 7.73663,
+    "hotspot_time": 21.422071
+  },
+  "True_False_5000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 23.182541,
+    "hotspot_time": 75.317638
+  },
+  "True_False_5000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 23.20684,
+    "hotspot_time": 76.272722
+  },
+  "True_False_5000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 22.982546,
+    "hotspot_time": 77.361504
+  },
+  "True_False_5000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 50.386747,
+    "hotspot_time": 167.803927
+  },
+  "True_False_5000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 48.661928,
+    "hotspot_time": 168.742034
+  },
+  "True_False_5000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 47.944801,
+    "hotspot_time": 169.495786
+  },
+  "True_False_10000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 15.909584,
+    "hotspot_time": 40.838888
+  },
+  "True_False_10000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 18.952579,
+    "hotspot_time": 44.556278
+  },
+  "True_False_10000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 22.400247,
+    "hotspot_time": 48.64731
+  },
+  "True_False_10000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 53.485917,
+    "hotspot_time": 152.128059
+  },
+  "True_False_10000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 53.813931,
+    "hotspot_time": 156.116273
+  },
+  "True_False_10000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 56.567837,
+    "hotspot_time": 160.017141
+  },
+  "True_False_10000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 116.701156,
+    "hotspot_time": 334.602895
+  },
+  "True_False_10000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 113.558164,
+    "hotspot_time": 343.612476
+  },
+  "True_False_10000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 117.541762,
+    "hotspot_time": 342.675374
+  },
+  "True_False_15000_1000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 26.315581,
+    "hotspot_time": 63.729831
+  },
+  "True_False_15000_1000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 35.004663,
+    "hotspot_time": 73.950462
+  },
+  "True_False_15000_1000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 44.279797,
+    "hotspot_time": 83.934715
+  },
+  "True_False_15000_2000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 85.119686,
+    "hotspot_time": 233.458017
+  },
+  "True_False_15000_2000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 88.492674,
+    "hotspot_time": 244.187792
+  },
+  "True_False_15000_2000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 97.217079,
+    "hotspot_time": 253.555769
+  },
+  "True_False_15000_3000_50": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 181.790349,
+    "hotspot_time": 512.658932
+  },
+  "True_False_15000_3000_100": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 179.208957,
+    "hotspot_time": 523.429355
+  },
+  "True_False_15000_3000_150": {
+    "weighted_graph": true,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 186.242597,
+    "hotspot_time": 533.998786
+  },
+  "False_True_5000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 6.081892,
+    "hotspot_time": 19.061789
+  },
+  "False_True_5000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 5.521246,
+    "hotspot_time": 19.203671
+  },
+  "False_True_5000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 5.560782,
+    "hotspot_time": 19.112242
+  },
+  "False_True_5000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 22.757571,
+    "hotspot_time": 74.676963
+  },
+  "False_True_5000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 20.875857,
+    "hotspot_time": 74.696858
+  },
+  "False_True_5000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 19.880164,
+    "hotspot_time": 74.680053
+  },
+  "False_True_5000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 50.355093,
+    "hotspot_time": 166.880155
+  },
+  "False_True_5000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 46.460713,
+    "hotspot_time": 166.715933
+  },
+  "False_True_5000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 44.250161,
+    "hotspot_time": 166.93817
+  },
+  "False_True_10000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 13.374053,
+    "hotspot_time": 38.295451
+  },
+  "False_True_10000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 12.38619,
+    "hotspot_time": 38.235367
+  },
+  "False_True_10000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 11.680479,
+    "hotspot_time": 38.34108
+  },
+  "False_True_10000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 50.611584,
+    "hotspot_time": 149.867506
+  },
+  "False_True_10000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 46.602726,
+    "hotspot_time": 149.404326
+  },
+  "False_True_10000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 43.539512,
+    "hotspot_time": 149.463862
+  },
+  "False_True_10000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 111.676562,
+    "hotspot_time": 332.625302
+  },
+  "False_True_10000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 102.801783,
+    "hotspot_time": 332.341581
+  },
+  "False_True_10000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 99.484577,
+    "hotspot_time": 335.083989
+  },
+  "False_True_15000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 21.153186,
+    "hotspot_time": 57.770554
+  },
+  "False_True_15000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 18.724445,
+    "hotspot_time": 57.591418
+  },
+  "False_True_15000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 17.764718,
+    "hotspot_time": 57.764463
+  },
+  "False_True_15000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 77.918225,
+    "hotspot_time": 224.645753
+  },
+  "False_True_15000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 70.856639,
+    "hotspot_time": 224.892759
+  },
+  "False_True_15000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 66.627978,
+    "hotspot_time": 224.794488
+  },
+  "False_True_15000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 173.549254,
+    "hotspot_time": 500.577963
+  },
+  "False_True_15000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 156.074848,
+    "hotspot_time": 498.632217
+  },
+  "False_True_15000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": true,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 147.711986,
+    "hotspot_time": 498.426523
+  },
+  "False_False_5000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 6.604916,
+    "hotspot_time": 19.552227
+  },
+  "False_False_5000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 7.152628,
+    "hotspot_time": 20.535039
+  },
+  "False_False_5000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 7.860942,
+    "hotspot_time": 21.398051
+  },
+  "False_False_5000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 23.077053,
+    "hotspot_time": 75.295085
+  },
+  "False_False_5000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 22.687364,
+    "hotspot_time": 75.882991
+  },
+  "False_False_5000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 23.130991,
+    "hotspot_time": 76.603591
+  },
+  "False_False_5000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 51.345859,
+    "hotspot_time": 166.328175
+  },
+  "False_False_5000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 48.290951,
+    "hotspot_time": 167.114255
+  },
+  "False_False_5000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 5000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 47.853805,
+    "hotspot_time": 167.90273
+  },
+  "False_False_10000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 15.653357,
+    "hotspot_time": 40.513081
+  },
+  "False_False_10000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 18.744076,
+    "hotspot_time": 44.217723
+  },
+  "False_False_10000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 22.595279,
+    "hotspot_time": 48.302167
+  },
+  "False_False_10000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 53.761204,
+    "hotspot_time": 151.571949
+  },
+  "False_False_10000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 53.927213,
+    "hotspot_time": 155.179473
+  },
+  "False_False_10000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 57.346261,
+    "hotspot_time": 159.115997
+  },
+  "False_False_10000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 116.044903,
+    "hotspot_time": 334.457852
+  },
+  "False_False_10000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 112.620285,
+    "hotspot_time": 338.113211
+  },
+  "False_False_10000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 10000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 113.535677,
+    "hotspot_time": 341.024712
+  },
+  "False_False_15000_1000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 50,
+    "sc_simvar_time": 26.030688,
+    "hotspot_time": 63.282614
+  },
+  "False_False_15000_1000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 100,
+    "sc_simvar_time": 34.558602,
+    "hotspot_time": 73.604218
+  },
+  "False_False_15000_1000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 1000,
+    "n_dims": 150,
+    "sc_simvar_time": 44.462051,
+    "hotspot_time": 83.725405
+  },
+  "False_False_15000_2000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 50,
+    "sc_simvar_time": 84.07096,
+    "hotspot_time": 230.576593
+  },
+  "False_False_15000_2000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 100,
+    "sc_simvar_time": 89.418739,
+    "hotspot_time": 240.824199
+  },
+  "False_False_15000_2000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 2000,
+    "n_dims": 150,
+    "sc_simvar_time": 97.874049,
+    "hotspot_time": 252.897299
+  },
+  "False_False_15000_3000_50": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 50,
+    "sc_simvar_time": 179.910942,
+    "hotspot_time": 511.033009
+  },
+  "False_False_15000_3000_100": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 100,
+    "sc_simvar_time": 176.872213,
+    "hotspot_time": 521.206288
+  },
+  "False_False_15000_3000_150": {
+    "weighted_graph": false,
+    "approx_neighbors": false,
+    "n_cells": 15000,
+    "n_genes": 3000,
+    "n_dims": 150,
+    "sc_simvar_time": 183.797214,
+    "hotspot_time": 527.611985
+  }
+}
