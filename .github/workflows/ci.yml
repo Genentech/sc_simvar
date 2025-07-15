@@ -139,7 +139,7 @@ jobs:
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
-    needs: [lint]
+    # needs: [lint]
     strategy:
       matrix:
         platform:
