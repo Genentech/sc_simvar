@@ -1,0 +1,38 @@
+[package]
+name = "sc_simvar_lib"
+version = "0.3.0"
+edition = "2024"
+description = "A Rust library for the sc_simvar Python package."
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+adjustp = "0.1.6"
+float-cmp = "0.10"
+indicatif = { version = "0.18", features = ["rayon"] }
+itertools = "0.14"
+ndarray = { version = "0.16", features = [
+    "matrixmultiply-threading",
+    "rayon",
+    "approx",
+] }
+ndarray-linalg = { version = "0.17", features = ["intel-mkl-static"] }
+ndarray-stats = "0.6"
+noisy_float = "0.2"
+num-traits = "0.2.19"
+numpy = "0.25"
+ordered-float = "5.0"
+petal-neighbors = "0.13"
+rand = "0.9.1"
+rayon = "1.10"
+statrs = "0.18"
+
+[lib]
+name = "_lib"
+path = "src/lib/mod.rs"
+crate-type = ["cdylib"]
+
+[dependencies.pyo3]
+version = "0.25"
+features = ["extension-module"]

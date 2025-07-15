@@ -1,0 +1,65 @@
+[project]
+name = "sc_simvar"
+description = "A re-implementation of the hotspotsc package using wrappers around Rust code."
+authors = [{ name = "Max Hargreaves", email = "hargreaw@gene.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dynamic = ["version"]
+dependencies = [
+    "anndata>=0.8.0",
+    "matplotlib>=3.0.0",
+    "numpy>=1.16.4",
+    "pandas>=1.0.0",
+    "scipy>=1.2.1",
+    "tqdm>=4.32.2",
+    "numba>=0.43.1",
+    "pynndescent>=0.5.11",
+    "scikit-learn>=0.21.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    # Dev deps
+    "hotspotsc>=1.1.1",
+    # Test & lint deps
+    "pytest>=8.1.1",
+    "pytest-cov>=4.1.0",
+    "pre-commit>=3.8.0",
+    "ruff>=0.6.0",
+    # Docs deps
+    "mkdocs-material>=9.5.37",
+    "mkdocstrings-python>=1.11.1",
+]
+
+[project.optional-dependencies]
+tree = ["ete3>=3.1.3"]
+
+[build-system]
+requires = ["maturin>=1.4.0,<2.0"]
+build-backend = "maturin"
+
+[tool.maturin]
+module-name = "sc_simvar._lib"
+features = ["pyo3/extension-module"]
+
+[tool.pyright]
+include = ["src/**/*.py", "tests/**/*.py", "scripts/**/*.py"]
+standard = ["src/", "tests/", "scripts/"]
+reportUnknownParameterType = "none"
+reportUnknownVariableType = "none"
+reportUnknownMemberType = "none"
+reportMissingTypeStubs = "none"
+pythonVersion = "3.10"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py", "docs/**/*.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "D", "PLC", "A", "RUF"]
+ignore = ["E501", "D203", "D213", "A003"]
+unfixable = ["F401", "F841"]
+
+[tool.pytest.ini_options]
+addopts = "--cov sc_simvar --cov-report term-missing --verbose -s"
