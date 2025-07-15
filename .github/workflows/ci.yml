@@ -78,18 +78,6 @@ jobs:
         with:
           python-version: '3.10'
           architecture: ${{ matrix.platform.target }}
-      - name: Install vcpkg and OpenBLAS
-        shell: pwsh
-        run: |
-          git clone https://github.com/microsoft/vcpkg.git
-          .\vcpkg\bootstrap-vcpkg.bat
-          .\vcpkg\vcpkg.exe install openblas:x64-windows
-        env:
-          VCPKG_DEFAULT_TRIPLET: x64-windows
-      - name: Set VCPKG_ROOT
-        shell: pwsh
-        run: |
-          echo "VCPKG_ROOT=$env:GITHUB_WORKSPACE\vcpkg" | Out-File -FilePath $env:GITHUB_ENV -Append
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
