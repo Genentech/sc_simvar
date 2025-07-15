@@ -37,8 +37,6 @@ jobs:
           - runner: ubuntu-latest
             target: x86_64
           - runner: ubuntu-latest
-            target: x86
-          - runner: ubuntu-latest
             target: aarch64
     steps:
       - uses: actions/checkout@v4
@@ -62,6 +60,7 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
+        if: ${{ startsWith(matrix.platform.target, 'x86_64') }}
         run: |
           uv venv
           uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
@@ -121,7 +120,7 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter --universal2
+          args: --release --out dist --find-interpreter 
           sccache: 'true'
       - name: List built wheels
         run: ls -lh dist || true
@@ -133,6 +132,7 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
+        if: ${{ startsWith(matrix.platform.target, 'aarch64') }}
         run: |
           uv venv
           uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
