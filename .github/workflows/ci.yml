@@ -40,12 +40,6 @@ jobs:
             target: x86
           - runner: ubuntu-latest
             target: aarch64
-          # - runner: ubuntu-latest
-          #   target: armv7
-          # - runner: ubuntu-latest
-          #   target: s390x
-          # - runner: ubuntu-latest
-          #   target: ppc64le
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -66,7 +60,10 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
-        run: uv run pytest
+        run: |
+            uv pip install --find-links=dist dist/*.whl
+            uv pip install pytest pytest-cov
+            uv run pytest --cov --cov-report=term-missing
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
@@ -76,8 +73,6 @@ jobs:
         platform:
           - runner: windows-latest
             target: x64
-          # - runner: windows-latest
-          #   target: x86
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -110,7 +105,10 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
-        run: uv run pytest
+        run: |
+            uv pip install --find-links=dist dist/*.whl
+            uv pip install pytest pytest-cov
+            uv run pytest --cov --cov-report=term-missing
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
@@ -143,7 +141,10 @@ jobs:
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
-        run: uv run pytest
+        run: |
+            uv pip install --find-links=dist dist/*.whl
+            uv pip install pytest pytest-cov
+            uv run pytest --cov --cov-report=term-missing
 
   sdist:
     runs-on: ubuntu-latest
