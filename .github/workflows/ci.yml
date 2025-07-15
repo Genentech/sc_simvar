@@ -57,13 +57,10 @@ jobs:
         with:
           name: wheels-linux-${{ matrix.platform.target }}
           path: dist
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
       - name: Test
         run: |
           set -e
-          pip install sc_simvar --find-links dist --force-reinstall
-          pip install pytest pytest-cov hotspot
+          pip install --find-links dist --force-reinstall sc_simvar pytest pytest-cov hotspot
           pytest
 
   windows:
