@@ -52,6 +52,8 @@ jobs:
           args: --release --out dist --find-interpreter
           # sccache: 'true'
           manylinux: auto
+      - name: List built wheels
+        run: ls -lh dist || true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
@@ -85,6 +87,8 @@ jobs:
           target: ${{ matrix.platform.target }}
           args: --release --out dist --find-interpreter
           sccache: 'true'
+      - name: List built wheels
+        run: ls -lh dist || true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
@@ -117,15 +121,15 @@ jobs:
         uses: PyO3/maturin-action@v1
         with:
           target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
+          args: --release --out dist --find-interpreter --universal2
           sccache: 'true'
+      - name: List built wheels
+        run: ls -lh dist || true
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-macos-${{ matrix.platform.target }}
           path: dist
-      - name: List built wheels
-        run: ls -lh dist || true
       - name: Setup uv
         uses: astral-sh/setup-uv@v6
       - name: Test
