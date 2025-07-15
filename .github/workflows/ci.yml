@@ -19,18 +19,18 @@ permissions:
   contents: read
 
 jobs:
-  # lint:
-  #   name: Lint
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Install uv
-  #       uses: astral-sh/setup-uv@v6
-  #     - run: uv run ruff check --output-format github
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+      - run: uv run ruff check --output-format github
 
   linux:
     runs-on: ${{ matrix.platform.runner }}
-    # needs: [lint]
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -68,7 +68,7 @@ jobs:
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
-    # needs: [lint]
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -87,7 +87,9 @@ jobs:
           args: --release --out dist --find-interpreter
           sccache: 'true'
       - name: List built wheels
-        run: ls -lh dist || true
+        run: |
+          if (Test-Path dist) { Get-ChildItem dist | Format-Table Name,Length } else { Write-Host "dist not found" }
+        shell: pwsh
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
@@ -103,7 +105,7 @@ jobs:
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
-    # needs: [lint]
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -171,27 +173,27 @@ jobs:
   #         command: upload
   #         args: --non-interactive --skip-existing wheels-*/*
 
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   permissions:
-  #     contents: write
-  #   # needs: [lint]
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Configure Git Credentials
-  #       run: |
-  #         git config user.name github-actions[bot]
-  #         git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-  #     - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
-  #     - uses: actions/cache@v4
-  #       with:
-  #         key: mkdocs-material-${{ env.cache_id }}
-  #         path: ~/.cache 
-  #         restore-keys: |
-  #           mkdocs-material-
-  #     - name: Install uv
-  #       uses: astral-sh/setup-uv@v6
-  #     - name: build-deploy
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       run: uv run mkdocs gh-deploy --force
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs: [lint]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: ~/.cache 
+          restore-keys: |
+            mkdocs-material-
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+      - name: build-deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run mkdocs gh-deploy --force
