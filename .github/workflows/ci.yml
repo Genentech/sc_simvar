@@ -52,7 +52,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install OpenSSL development headers
-        run: sudo apt-get update && sudo apt-get install -y openssl-devel
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev 
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
