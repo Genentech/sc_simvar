@@ -52,7 +52,7 @@ jobs:
         with:
           python-version: '3.10'
       - name: Install OpenSSL development headers
-        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+        run: sudo apt-get update && sudo apt-get install -y openssl-dev
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
@@ -71,7 +71,7 @@ jobs:
         run: |
           set -e
           pip install sc_simvar --find-links dist --force-reinstall
-          pip install pytest
+          pip install pytest pytest-cov
           pytest
       - name: pytest
         if: ${{ !startsWith(matrix.platform.target, 'x86') && matrix.platform.target != 'ppc64' }}
@@ -209,13 +209,11 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    # needs: [release]
+    needs: [lint]
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
-      - name: Configure Git Credentials
-        run: |
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
       - name: Install uv
         uses: astral-sh/setup-uv@v6
-      - run: uv run mkdocs gh-deploy --force
+      - run: uv run mkdocs gh-deploy --force --remote-name origin --remote-branch gh-pages --token $GITHUB_TOKEN
