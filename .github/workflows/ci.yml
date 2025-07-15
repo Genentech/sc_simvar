@@ -158,20 +158,25 @@ jobs:
           name: wheels-sdist
           path: dist
 
-  # release:
-  #   name: Release
-  #   runs-on: ubuntu-latest
-  #   if: ${{ startsWith(github.ref, 'refs/tags/') }}
-  #   needs: [linux, windows, macos, sdist]
-  #   steps:
-  #     - uses: actions/download-artifact@v4
-  #     - name: Publish to PyPI
-  #       uses: PyO3/maturin-action@v1
-  #       env:
-  #         MATURIN_PYPI_TOKEN: ${{ secrets.PYPI_API_TOKEN }}
-  #       with:
-  #         command: upload
-  #         args: --non-interactive --skip-existing wheels-*/*
+  
+  pypi-publish:
+    name: upload release to PyPI
+    runs-on: ubuntu-latest
+    permissions:
+      # IMPORTANT: this permission is mandatory for Trusted Publishing
+      id-token: write
+
+    # This job will only run on tags
+    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    needs: [linux, windows, macos, sdist]
+
+    steps:
+      # retrieve your distributions here
+      - name: Download wheels
+        uses: actions/download-artifact@v4
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
 
   deploy:
     runs-on: ubuntu-latest
