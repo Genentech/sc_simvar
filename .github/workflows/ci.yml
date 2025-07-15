@@ -134,7 +134,7 @@ jobs:
         run: |
           set -e
           pip install sc_simvar --find-links dist --force-reinstall
-          pip install pytest
+          pip install pytest pytest-cov
           pytest
 
   macos:
@@ -171,7 +171,7 @@ jobs:
         run: |
           set -e
           pip install sc_simvar --find-links dist --force-reinstall
-          pip install pytest
+          pip install pytest pytest-cov
           pytest
 
   sdist:
@@ -180,7 +180,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install OpenSSL development headers
-        run: sudo apt-get update && sudo apt-get install -y libssl-dev
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev 
       - name: Build sdist
         uses: PyO3/maturin-action@v1
         with:
@@ -214,6 +214,17 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: ~/.cache 
+          restore-keys: |
+            mkdocs-material-
       - name: Install uv
         uses: astral-sh/setup-uv@v6
       - run: uv run mkdocs gh-deploy --force
