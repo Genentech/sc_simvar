@@ -60,7 +60,8 @@ jobs:
       - name: Test
         run: |
           set -e
-          pip install --find-links dist --force-reinstall sc_simvar pytest pytest-cov hotspot
+          pip install --find-links dist --force-reinstall sc_simvar 
+          pip install pytest pytest-cov hotspotsc
           pytest
 
   windows:
