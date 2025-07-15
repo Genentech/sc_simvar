@@ -1,6 +1,6 @@
 [package]
 name = "sc_simvar_lib"
-version = "0.3.0"
+version = "0.3.0-rc0"
 edition = "2024"
 description = "A Rust library for the sc_simvar Python package."
 license = "MIT"
