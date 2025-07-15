@@ -61,10 +61,7 @@ jobs:
         uses: astral-sh/setup-uv@v6
       - name: Test
         run: |
-          uv venv ./test
-          uv pip install --no-deps --find-links=dist pytest pytest-cov
-          uv pip install --find-links=dist dist/*.whl
-          pytest
+          uvx --find-links=dist --with pytest-cov --with sc_simvar pytest
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
