@@ -17,7 +17,7 @@ ndarray = { version = "0.16", features = [
     "rayon",
     "approx",
 ] }
-ndarray-linalg = { version = "0.17", features = ["openblas-system"] }
+ndarray-linalg = { version = "0.17", features = ["intel-mkl-static"] }
 ndarray-stats = "0.6"
 noisy_float = "0.2"
 num-traits = "0.2.19"
