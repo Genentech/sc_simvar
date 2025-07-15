@@ -30,6 +30,7 @@ jobs:
 
   linux:
     runs-on: ${{ matrix.platform.runner }}
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -50,6 +51,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+      - name: Install OpenSSL development headers
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
@@ -88,6 +91,7 @@ jobs:
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -101,6 +105,18 @@ jobs:
         with:
           python-version: '3.10'
           architecture: ${{ matrix.platform.target }}
+      - name: Install vcpkg and OpenBLAS
+        shell: pwsh
+        run: |
+          git clone https://github.com/microsoft/vcpkg.git
+          .\vcpkg\bootstrap-vcpkg.bat
+          .\vcpkg\vcpkg.exe install openblas:x64-windows
+        env:
+          VCPKG_DEFAULT_TRIPLET: x64-windows
+      - name: Set VCPKG_ROOT
+        shell: pwsh
+        run: |
+          echo "VCPKG_ROOT=$env:GITHUB_WORKSPACE\vcpkg" | Out-File -FilePath $env:GITHUB_ENV -Append
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
@@ -123,6 +139,7 @@ jobs:
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
+    needs: [lint]
     strategy:
       matrix:
         platform:
@@ -146,8 +163,10 @@ jobs:
         with:
           name: wheels-macos-${{ matrix.platform.target }}
           path: dist
+      - name: List built wheels
+        run: ls -lh dist || true
       - name: pytest
-        if: ${{ !startsWith(matrix.platform.target, 'aarch64') }}
+        if: ${{ startsWith(matrix.platform.target, 'aarch64') }}
         shell: bash
         run: |
           set -e
@@ -157,8 +176,11 @@ jobs:
 
   sdist:
     runs-on: ubuntu-latest
+    needs: [lint]
     steps:
       - uses: actions/checkout@v4
+      - name: Install OpenSSL development headers
+        run: sudo apt-get update && sudo apt-get install -y libssl-dev
       - name: Build sdist
         uses: PyO3/maturin-action@v1
         with:
