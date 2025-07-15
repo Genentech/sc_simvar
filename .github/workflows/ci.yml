@@ -60,7 +60,7 @@ jobs:
       - name: Test
         run: |
           set -e
-          pip install --find-links dist --force-reinstall sc_simvar 
+          pip install sc_simvar --find-links dist --force-reinstall
           pip install pytest pytest-cov hotspotsc
           pytest
 
@@ -101,10 +101,12 @@ jobs:
         with:
           name: wheels-windows-${{ matrix.platform.target }}
           path: dist
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
       - name: Test
-        run: uv run pytest
+        run: |
+          set -e
+          pip install sc_simvar --find-links dist --force-reinstall
+          pip install pytest pytest-cov hotspotsc
+          pytest
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
@@ -134,10 +136,12 @@ jobs:
           path: dist
       - name: List built wheels
         run: ls -lh dist || true
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
       - name: Test
-        run: uv run pytest
+        run: |
+          set -e
+          pip install sc_simvar --find-links dist --force-reinstall
+          pip install pytest pytest-cov hotspotsc
+          pytest
 
   sdist:
     runs-on: ubuntu-latest
