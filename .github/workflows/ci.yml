@@ -61,7 +61,10 @@ jobs:
         uses: astral-sh/setup-uv@v6
       - name: Test
         run: |
-          uvx --find-links=dist --with pytest-cov --with sc_simvar pytest
+          set -e
+          pip install sc_simvar --find-links dist --force-reinstall
+          pip install pytest pytest-cov hotspot
+          pytest
 
   windows:
     runs-on: ${{ matrix.platform.runner }}
