@@ -4,7 +4,9 @@ A re-implementation of the [hotspotsc](https://github.com/YosefLab/Hotspot) v1.1
 
 Not all code from `hotspotsc` has been translated to Rust, but all code has been localized.
 
-All functions (Rust and Python) are tested to have the exact same output as Hotspotsc for the same input data. 
+All functions (Rust and Python) are tested to have the exact same output as Hotspotsc for the same input data.
+
+Full Docs: https://genentech.github.io/sc_simvar/
 
 ## Performance
 
@@ -14,7 +16,7 @@ Across the 108 total simulations performed the mean speed up of `SCSimVar` over 
 
 Summary of benchmarking results:
 
-![image](benchmark_results.png)
+![image](https://raw.githubusercontent.com/Genentech/sc_simvar/main/benchmark_results.png)
 
 Machine specs:
 
@@ -28,20 +30,6 @@ Machine specs:
 
     rustc: 1.85.0 (4d91de4e4 2025-02-17)
     Python: 3.10.14
-
-## Installation
-
-=== "pip"
-
-    ```
-    pip install --extra-index-url https://pypi.cedar.roche.com sc_simvar
-    ```
-
-=== "uv"
-
-    ```
-    uv tool install --extra-index-url https://pypi.cedar.roche.com sc_simvar
-    ```
 
 ## Usage
 
