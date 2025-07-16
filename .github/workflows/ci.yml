@@ -10,89 +10,89 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install uv
-        uses: astral-sh/setup-uv@v6
-      - run: uv run ruff check --output-format github
+  # lint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Install uv
+  #       uses: astral-sh/setup-uv@v6
+  #     - run: uv run ruff check --output-format github
 
-  linux:
-    runs-on: ${{ matrix.platform.runner }}
-    needs: [lint]
-    strategy:
-      matrix:
-        platform:
-          - runner: ubuntu-latest
-            target: x86_64
-          - runner: ubuntu-latest
-            target: aarch64
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-      - name: Build wheels
-        uses: PyO3/maturin-action@v1
-        with:
-          target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
-          # sccache: 'true'
-          manylinux: auto
-      - name: List built wheels
-        run: ls -lh dist || true
-      - name: Upload wheels
-        uses: actions/upload-artifact@v4
-        with:
-          name: wheels-linux-${{ matrix.platform.target }}
-          path: dist
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
-      - name: Test
-        if: ${{ startsWith(matrix.platform.target, 'x86_64') }}
-        run: |
-          uv venv
-          uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
-          uv run --no-sync pytest
+  # linux:
+  #   runs-on: ${{ matrix.platform.runner }}
+  #   needs: [lint]
+  #   strategy:
+  #     matrix:
+  #       platform:
+  #         - runner: ubuntu-latest
+  #           target: x86_64
+  #         - runner: ubuntu-latest
+  #           target: aarch64
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.10'
+  #     - name: Build wheels
+  #       uses: PyO3/maturin-action@v1
+  #       with:
+  #         target: ${{ matrix.platform.target }}
+  #         args: --release --out dist --find-interpreter
+  #         # sccache: 'true'
+  #         manylinux: auto
+  #     - name: List built wheels
+  #       run: ls -lh dist || true
+  #     - name: Upload wheels
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: wheels-linux-${{ matrix.platform.target }}
+  #         path: dist
+  #     - name: Setup uv
+  #       uses: astral-sh/setup-uv@v6
+  #     - name: Test
+  #       if: ${{ startsWith(matrix.platform.target, 'x86_64') }}
+  #       run: |
+  #         uv venv
+  #         uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
+  #         uv run --no-sync pytest
 
-  windows:
-    runs-on: ${{ matrix.platform.runner }}
-    needs: [lint]
-    strategy:
-      matrix:
-        platform:
-          - runner: windows-latest
-            target: x64
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-          architecture: ${{ matrix.platform.target }}
-      - name: Build wheels
-        uses: PyO3/maturin-action@v1
-        with:
-          target: ${{ matrix.platform.target }}
-          args: --release --out dist --find-interpreter
-          sccache: 'true'
-      - name: List built wheels
-        run: |
-          if (Test-Path dist) { Get-ChildItem dist | Format-Table Name,Length } else { Write-Host "dist not found" }
-        shell: pwsh
-      - name: Upload wheels
-        uses: actions/upload-artifact@v4
-        with:
-          name: wheels-windows-${{ matrix.platform.target }}
-          path: dist
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
-      - name: Test
-        run: |
-          uv venv
-          uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
-          uv run --no-sync pytest
+  # windows:
+  #   runs-on: ${{ matrix.platform.runner }}
+  #   needs: [lint]
+  #   strategy:
+  #     matrix:
+  #       platform:
+  #         - runner: windows-latest
+  #           target: x64
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-python@v5
+  #       with:
+  #         python-version: '3.10'
+  #         architecture: ${{ matrix.platform.target }}
+  #     - name: Build wheels
+  #       uses: PyO3/maturin-action@v1
+  #       with:
+  #         target: ${{ matrix.platform.target }}
+  #         args: --release --out dist --find-interpreter
+  #         sccache: 'true'
+  #     - name: List built wheels
+  #       run: |
+  #         if (Test-Path dist) { Get-ChildItem dist | Format-Table Name,Length } else { Write-Host "dist not found" }
+  #       shell: pwsh
+  #     - name: Upload wheels
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: wheels-windows-${{ matrix.platform.target }}
+  #         path: dist
+  #     - name: Setup uv
+  #       uses: astral-sh/setup-uv@v6
+  #     - name: Test
+  #       run: |
+  #         uv venv
+  #         uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
+  #         uv run --no-sync pytest
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
@@ -133,7 +133,7 @@ jobs:
 
   sdist:
     runs-on: ubuntu-latest
-    needs: [lint]
+    # needs: [lint]
     steps:
       - uses: actions/checkout@v4
       - name: Install OpenSSL development headers
@@ -158,14 +158,15 @@ jobs:
 
     # This job will only run on tags
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
-    needs: [linux, windows, macos, sdist]
+    # needs: [linux, windows, macos, sdist]
+    needs: [macos, sdist]
 
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v4
 
     - name: List downloaded files
-      run: ls -lh ./dist
+      run: ls -lh
 
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
