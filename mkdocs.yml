@@ -2,7 +2,7 @@ site_name: sc_simvar
 site_author: Max Hargreaves
 copyright: Genentech, 2025
 repo_name: single_cell/sc_simvar
-repo_url: https://code.roche.com/single_cell/sc_simvar
+repo_url: https://github.com/Genentech/sc_simvar
 
 plugins:
   - mkdocstrings:
@@ -19,8 +19,8 @@ plugins:
 
 extra:
   social:
-    - icon: fontawesome/brands/gitlab
-      link: https://code.roche.com/hargreaw
+    - icon: fontawesome/brands/github
+      link: https://github.com/DiDeoxy
 
 # https://squidfunk.github.io/mkdocs-material/setup/extensions/
 markdown_extensions:
