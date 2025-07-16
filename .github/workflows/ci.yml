@@ -169,10 +169,14 @@ jobs:
     - name: List downloaded files
       run: ls -lh
 
-    - name: relocate all dirs to dist
+    - name: Relocate all wheel dirs to dist
       run: |
         mkdir -p dist
-        find . -mindepth 1 -maxdepth 1 ! -name 'dist' -exec mv {} dist/ \;
+        for d in wheel-*; do
+          if [ -d "$d" ]; then
+            mv "$d"/* dist/
+          fi
+        done
 
     - name: List downloaded files
       run: ls -lh ./dist
