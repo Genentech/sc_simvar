@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.3.1
+- Fix: replace compute_weights hotspotsc import with sc_simvar._lib
+
 ## v0.3.0
 - Enhancement: increased speedup of Rust code dramatically using Github Co-Pilot with Claude, now at 3x
 - Enhancement: added improved benchmarking and results

@@ -2,11 +2,12 @@
 
 from typing import Any, cast
 
-from hotspot.knn import compute_weights
 from numpy import float64, uint64
 from numpy.typing import NDArray
 from pynndescent import NNDescent  # type: ignore
 from sklearn.neighbors import NearestNeighbors
+
+from sc_simvar._lib import compute_weights
 
 
 def latent_neighbors_and_weights(
