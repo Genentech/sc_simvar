@@ -16,6 +16,7 @@ dependencies = [
     "pynndescent>=0.5.11",
     "scikit-learn>=0.21.2",
 ]
+license = { file = "LICENSE.md" }
 
 [tool.uv]
 dev-dependencies = [
@@ -41,6 +42,12 @@ build-backend = "maturin"
 [tool.maturin]
 module-name = "sc_simvar._lib"
 features = ["pyo3/extension-module"]
+include = [
+    { path = "LICENSE.md", format = "sdist" },
+    { path = "AUTHORS.md", format = "sdist" },
+    { path = "README.md", format = "sdist" },
+    { path = "CHANGELOG.md", format = "sdist" },
+]
 
 [tool.pyright]
 include = ["src/**/*.py", "tests/**/*.py", "scripts/**/*.py"]

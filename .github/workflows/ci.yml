@@ -172,7 +172,7 @@ jobs:
     - name: Relocate all wheel dirs to dist
       run: |
         mkdir -p dist
-        find . -type f -name 'sc_simvar*' -exec mv {} dist/ \;
+        find . -type f -name 'sc_simvar*' ! -path './dist/*' -exec mv {} dist/ \;
 
     - name: List downloaded files
       run: ls -lh ./dist
