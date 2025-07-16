@@ -169,6 +169,14 @@ jobs:
     - name: List downloaded files
       run: ls -lh
 
+    - name: relocate all dirs to dist
+      run: |
+        mkdir -p dist
+        find . -mindepth 1 -maxdepth 1 ! -name 'dist' -exec mv {} dist/ \;
+
+    - name: List downloaded files
+      run: ls -lh ./dist
+
     - name: Publish package distributions to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
 
