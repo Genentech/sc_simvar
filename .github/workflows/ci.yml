@@ -43,11 +43,6 @@ jobs:
   #         manylinux: auto
   #     - name: List built wheels
   #       run: ls -lh dist || true
-  #     - name: Upload wheels
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: wheels-linux-${{ matrix.platform.target }}
-  #         path: dist
   #     - name: Setup uv
   #       uses: astral-sh/setup-uv@v6
   #     - name: Test
@@ -56,6 +51,11 @@ jobs:
   #         uv venv
   #         uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
   #         uv run --no-sync pytest
+  #     - name: Upload wheels
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: wheels-linux-${{ matrix.platform.target }}
+  #         path: dist
 
   # windows:
   #   runs-on: ${{ matrix.platform.runner }}
@@ -81,11 +81,6 @@ jobs:
   #       run: |
   #         if (Test-Path dist) { Get-ChildItem dist | Format-Table Name,Length } else { Write-Host "dist not found" }
   #       shell: pwsh
-  #     - name: Upload wheels
-  #       uses: actions/upload-artifact@v4
-  #       with:
-  #         name: wheels-windows-${{ matrix.platform.target }}
-  #         path: dist
   #     - name: Setup uv
   #       uses: astral-sh/setup-uv@v6
   #     - name: Test
@@ -93,6 +88,11 @@ jobs:
   #         uv venv
   #         uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
   #         uv run --no-sync pytest
+  #     - name: Upload wheels
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         name: wheels-windows-${{ matrix.platform.target }}
+  #         path: dist
 
   macos:
     runs-on: ${{ matrix.platform.runner }}
@@ -117,19 +117,19 @@ jobs:
           sccache: 'true'
       - name: List built wheels
         run: ls -lh dist || true
+      # - name: Setup uv
+      #   uses: astral-sh/setup-uv@v6
+      # - name: Test
+      #   if: ${{ startsWith(matrix.platform.target, 'aarch64') }}
+      #   run: |
+      #     uv venv
+      #     uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
+      #     uv run --no-sync pytest
       - name: Upload wheels
         uses: actions/upload-artifact@v4
         with:
           name: wheels-macos-${{ matrix.platform.target }}
           path: dist
-      - name: Setup uv
-        uses: astral-sh/setup-uv@v6
-      - name: Test
-        if: ${{ startsWith(matrix.platform.target, 'aarch64') }}
-        run: |
-          uv venv
-          uv pip install --only-binary=true --find-links=dist --force-reinstall sc_simvar pytest pytest-cov hotspotsc
-          uv run --no-sync pytest
 
   sdist:
     runs-on: ubuntu-latest
@@ -155,9 +155,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      id-token: write
 
     # This job will only run on tags
-    if: ${{ startsWith(github.ref, 'refs/tags/') }}
+    # if: ${{ startsWith(github.ref, 'refs/tags/') }}
     # needs: [linux, windows, macos, sdist]
     needs: [macos, sdist]
 
