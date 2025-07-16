@@ -18,6 +18,10 @@ dependencies = [
 ]
 license = { file = "LICENSE.md" }
 
+[project.urls]
+Homepage = "https://genentech.github.io/sc_simvar/"
+Repository = "https://github.com/Genentech/sc_simvar"
+
 [tool.uv]
 dev-dependencies = [
     # Dev deps
