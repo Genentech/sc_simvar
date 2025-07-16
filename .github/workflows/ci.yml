@@ -165,10 +165,6 @@ jobs:
     steps:
     - name: Download all workflow run artifacts
       uses: actions/download-artifact@v4
-
-    - name: List downloaded files
-      run: ls -lh wheels-macos-aarch64
-
     - name: Relocate all wheel dirs to dist
       run: |
         mkdir -p dist
